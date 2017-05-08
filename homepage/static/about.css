@@ -1,0 +1,86 @@
+@media screen and (min-width: 550px) {
+    p , a{
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    * { box-sizing: border-box; }
+    .video-background {
+      background: #000;
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -99;
+    }
+    .video-foreground,
+    .video-background iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #vidtop-content {
+    	top: 0;
+    	color: #fff;
+    }
+    .info {
+      position: absolute;
+      top: 25%;
+      right: 5%;
+      width: 40%;
+      height: 50%;
+      background: rgba(0,0,0,0.1);
+      color: white;
+      padding: 1rem;
+      overflow: scroll; }
+    .sidemenu {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      width: 90%;
+      background: rgba(0,0,0,0);
+      color: #fff;
+    }
+    .sidemenu, h1 {
+      font-size: 15px;
+      margin-top: 0;
+      font-family: 'Raleway', sans-serif;}
+
+    .sidemenu a {
+      display: inline;
+      color: #fff;
+      text-decoration: none;
+      background: rgba(0,0,0,0);
+      transition: .6s; background;
+      border-bottom: none;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+      .video-foreground { height: 300%; top: -100%; }
+    }
+    @media (max-aspect-ratio: 16/9) {
+      .video-foreground { width: 300%; left: -100%; }
+    }
+     /*and (max-width: 600px)*/
+
+    @media all and (max-width: 550px) {
+    .vid-info .acronym { display: none; }
+    }
+    span.spacer {
+        margin: 0 7px;
+        font-size: 1.5vw;
+    }
+    .there {
+      color: grey;
+    }
+}
+@media screen and (max-width: 550px) {
+    .sidemenu {
+      display: none;
+    }
+}
