@@ -21,5 +21,7 @@ import homepage.views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^homepage$', homepage.views.homepage, name='homepage'),
-    url(r'^about$', homepage.views.about, name='about')
+    url(r'^about$', homepage.views.about, name='about'),
+    url(r'^index$', homepage.views.index, name='index'),
+
 ]

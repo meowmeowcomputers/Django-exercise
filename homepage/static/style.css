@@ -1,0 +1,53 @@
+/*.dummy {
+  //dunno why, but link cancels out first element
+}*/
+
+html {
+    background: url("{% static 'background.jpg' %}")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  h1 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3.5vw;
+    text-decoration: none;
+
+  }
+  h2, a:visited, a:active, a, p, .there{
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5vw;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: grey;
+  }
+
+  .sidemenu {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    margin:auto;
+    margin: 0 0 10px 10px;
+    width: 90%;
+    /*text-align: center*/
+
+  }
+  span.spacer {
+      margin: 0 7px;
+      font-size: 1.5vw;
+  }
+  .name {
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    margin: 0 0 10px 10px;
+  }
+  .there {
+    color: #3d4756;
+  }
