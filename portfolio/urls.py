@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 
 import homepage.views
+import blog.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,6 +25,7 @@ urlpatterns = [
     url(r'^about$', homepage.views.about, name='about'),
     url(r'^$', homepage.views.index, name='index'),
     url(r'^contact$', homepage.views.contact, name='contact'),
-
-
+    url(r'^blog/(\S+)/(\S+)/$', blog.views.blog_post),
+    url(r'^blog/(\S+)/$', blog.views.blog_index),
+    url(r'^poll$', homepage.views.poll, name='poll'),
 ]

@@ -46,3 +46,6 @@ def contact(request):
         'form': form
     }
     return TemplateResponse(request, 'contact.html', context)
+
+def poll(request):
+    return TemplateResponse(request, 'poll.html', {})

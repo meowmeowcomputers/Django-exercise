@@ -1,0 +1,10 @@
+{% block title %}
+{{ post.title }} - {{ post.blog.name }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ posts.title }}</h1>
+<p>
+{{ post.body | linebreaksbr }}
+</p>
+{% endblock %}
