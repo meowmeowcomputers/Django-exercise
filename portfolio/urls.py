@@ -23,5 +23,7 @@ urlpatterns = [
     url(r'^homepage$', homepage.views.homepage, name='homepage'),
     url(r'^about$', homepage.views.about, name='about'),
     url(r'^$', homepage.views.index, name='index'),
+    url(r'^contact$', homepage.views.contact, name='contact'),
+
 
 ]

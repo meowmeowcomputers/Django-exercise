@@ -27,10 +27,18 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '45.76.233.87',
     'dev.meowmeow.computer',
+    '127.0.0.1:8000',
+    '127.0.0.1'
 ]
 
 
 # Application definition
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'email-smtp.us-west-2.amazonaws.com'
+EMAIL_HOST_USER = os.environ.get('SMTP_USERNAME', '')
+EMAIL_HOST_PASSWORD = os.environ.get('SMTP_PASSWORD', '')
+EMAIL_PORT = 587
 
 INSTALLED_APPS = [
     'django.contrib.admin',
