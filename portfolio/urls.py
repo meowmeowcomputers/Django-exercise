@@ -23,9 +23,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^homepage$', homepage.views.homepage, name='homepage'),
     url(r'^about$', homepage.views.about, name='about'),
-    url(r'^$', homepage.views.index, name='index'),
+    url(r'^$', homepage.views.as_view(), name='index'),
     url(r'^contact$', homepage.views.contact, name='contact'),
     url(r'^blog/(\S+)/(\S+)/$', blog.views.blog_post),
     url(r'^blog/(\S+)/$', blog.views.blog_index),
     url(r'^poll$', homepage.views.poll, name='poll'),
+    url(r'^(?P<pk>[0-9]+)/$', homepage.views.as_view(), name='detail'),#tuitorial
+    url(r'^(?P<pk>[0-9]+)/results/$', homepage.views.as_view(), name='results'),#tuitorial
+    url(r'^(?P<question_id>[0-9]+)/vote/$', homepage.views.vote, name='vote'),#tuitorial
 ]

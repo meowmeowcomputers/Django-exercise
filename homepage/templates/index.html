@@ -3,42 +3,16 @@
 {% load static %}
 
   <head>
-    <title>Ryan Leon</title>
-    <meta charset="UTF-8"><!--Recommended -->
-    <link rel = 'stylesheet' type = "text/css" href='{% static 'about.css' %}'/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <style>
-    html {
-        background: url("{% static 'background.jpg' %}")no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-    .dummy {
-
-    }
-
-  </style>
-
   </head>
   <body>
-      <br>
-      <div class='name'>
-      <h1>R Y A N<span class='spacer'></span> L E O N</h1>
-      <h1>Full Stack Software Developer<br><br></h1>
-      </div>
-      <div class='sidemenu'>
-        <h2>
-      <span class='there'>m a i n</span><span class='spacer'>|</span>
-      <a href='{% url 'about' %}'>a b o u t</a><span class='spacer'>|</span>
-      <a href=#>p o r t f o l i o</a><span class='spacer'>|</span>
-      <a href=#>p r o j e c t s<span class='spacer'></span> a n d <span class='spacer'></span>
-      t e c h n o l o g y</a><span class='spacer'>|</span>
-      <a href='https://medium.com/@ryanleon'>b l o g</a><span class='spacer'>|</span>
-      <a href=#>c o n t a c t<br></a>
-        </h2>
-    </div>
-
+    {% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
   </body>
 </html>
